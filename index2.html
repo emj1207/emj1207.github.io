@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EMJ Topup</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .container {
+        max-width: 900px;
+        margin: 20px auto;
+      }
+      .card {
+        margin-bottom: 20px;
+      }
+      .jumbotron {
+        background-color: #6c757d;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron text-center">
+        <h1>EMJ Topup</h1>
+      </div>
+      <div class="card">
+        <div class="card-header">Masukkan User ID</div>
+        <div class="card-body">
+          <form id="userForm" action="confirm.html" method="GET">
+            <div class="form-group">
+              <label for="userID">User ID</label>
+              <input
+                type="text"
+                class="form-control"
+                id="userID"
+                name="userID"
+                placeholder="Masukkan User ID"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="zoneID">Zone ID</label>
+              <input
+                type="text"
+                class="form-control"
+                id="zoneID"
+                name="zoneID"
+                placeholder="Zone ID"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-primary" >Next</button>
+          </form>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">Pilih Nominal Top Up</div>
+        <div class="card-body">
+          <h5>Pilih Kategori</h5>
+          <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-primary active">
+              <input type="radio" name="options" id="option1" checked /> Diamond
+            </label>
+            <label class="btn btn-primary">
+              <input type="radio" name="options" id="option2" /> Coupon Pass
+            </label>
+            <label class="btn btn-primary">
+              <input type="radio" name="options" id="option3" /> Weekly Diamond
+              Pass
+            </label>
+            <label class="btn btn-primary">
+              <input type="radio" name="options" id="option4" /> Twilight Pass
+            </label>
+          </div>
+          <h5 class="mt-3">Pilih Item</h5>
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="card">
+                <div class="card-body text-center">
+                  <h5 class="card-title">6 Diamonds</h5>
+                  <p class="card-text">Rp. 1.500</p>
+                  <button class="btn btn-primary">Pilih</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="card">
+                <div class="card-body text-center">
+                  <h5 class="card-title">12 Diamonds</h5>
+                  <p class="card-text">Rp. 3.000</p>
+                  <button class="btn btn-primary">Pilih</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="card">
+                <div class="card-body text-center">
+                  <h5 class="card-title">59 Diamonds</h5>
+                  <p class="card-text">Rp. 15.000</p>
+                  <button class="btn btn-primary">Pilih</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-sm-4">
+              <div class="card">
+                <div class="card-body text-center">
+                  <h5 class="card-title">170 Diamonds</h5>
+                  <p class="card-text">Rp. 43.000</p>
+                  <button class="btn btn-primary">Pilih</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="card">
+                <div class="card-body text-center">
+                  <h5 class="card-title">885 Diamonds</h5>
+                  <p class="card-text">Rp. 218.432</p>
+                  <button class="btn btn-primary">Pilih</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="card">
+                <div class="card-body text-center">
+                  <h5 class="card-title">2010 Diamonds</h5>
+                  <p class="card-text">Rp. 475.876</p>
+                  <button class="btn btn-primary">Pilih</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-sm-4">
+              <div class="card">
+                <div class="card-body text-center">
+                  <h5 class="card-title">4830 Diamonds</h5>
+                  <p class="card-text">Rp. 1.140.000</p>
+                  <button class="btn btn-primary">Pilih</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

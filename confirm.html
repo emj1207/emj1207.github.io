@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EMJ Topup - Confirm</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .container {
+        max-width: 900px;
+        margin: 20px auto;
+      }
+      .card {
+        margin-bottom: 20px;
+      }
+      .jumbotron {
+        background-color: #6c757d;
+        color: white;
+      }
+    </style>
+    <script>
+      function getUrlParams() {
+        const params = new URLSearchParams(window.location.search);
+        return {
+          userID: params.get("userID"),
+          zoneID: params.get("zoneID"),
+        };
+      }
+
+      function displayUserInfo() {
+        const userInfo = getUrlParams();
+        document.getElementById("userID").innerText = userInfo.userID;
+        document.getElementById("zoneID").innerText = userInfo.zoneID;
+      }
+    </script>
+  </head>
+  <body onload="displayUserInfo()">
+    <div class="container">
+      <div class="jumbotron text-center">
+        <h1>EMJ Topup - Confirm</h1>
+      </div>
+      <div class="card">
+        <div class="card-header">Konfirmasi Pesanan</div>
+        <div class="card-body">
+          <h5>User ID: <span id="userID"></span></h5>
+          <h5>Zone ID: <span id="zoneID"></span></h5>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">Pilih Pembayaran</div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-sm-6">
+              <button class="btn btn-outline-primary btn-block">DANA</button>
+            </div>
+            <div class="col-sm-6">
+              <button class="btn btn-outline-primary btn-block">GoPay</button>
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col-sm-6">
+              <button class="btn btn-outline-primary btn-block">OVO</button>
+            </div>
+            <div class="col-sm-6">
+              <button class="btn btn-outline-primary btn-block">LinkAja</button>
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col-sm-6">
+              <button class="btn btn-outline-primary btn-block">
+                ShopeePay
+              </button>
+            </div>
+            <div class="col-sm-6">
+              <button class="btn btn-outline-primary btn-block">
+                Alfamart
+              </button>
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col-sm-6">
+              <button class="btn btn-outline-primary btn-block">
+                Indomaret
+              </button>
+            </div>
+            <div class="col-sm-6">
+              <button class="btn btn-outline-primary btn-block">
+                Bank Transfer
+              </button>
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col-sm-6">
+              <button class="btn btn-outline-primary btn-block">
+                Credit Card
+              </button>
+            </div>
+            <div class="col-sm-6">
+              <button class="btn btn-outline-primary btn-block">QRIS</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">Konfirmasi Pembayaran</div>
+        <div class="card-body">
+          <form action="thankyou.html" method="POST">
+            <input type="hidden" name="userID" value="" id="hiddenUserID" />
+            <input type="hidden" name="zoneID" value="" id="hiddenZoneID" />
+            <button type="submit" class="btn btn-primary btn-block">
+              Bayar Sekarang
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.getElementById("hiddenUserID").value = getUrlParams().userID;
+      document.getElementById("hiddenZoneID").value = getUrlParams().zoneID;
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
